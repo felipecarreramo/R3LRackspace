@@ -1,0 +1,6 @@
+framework module R3LRackspace {
+  umbrella header "R3LRackspace-umbrella.h"
+
+  export *
+  module * { export * }
+}

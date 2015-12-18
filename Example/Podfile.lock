@@ -1,0 +1,14 @@
+PODS:
+  - R3LRackspace (0.1.0)
+
+DEPENDENCIES:
+  - R3LRackspace (from `../`)
+
+EXTERNAL SOURCES:
+  R3LRackspace:
+    :path: ../
+
+SPEC CHECKSUMS:
+  R3LRackspace: 391fcd5abe50ac4a06fc39060e20bbe2d9fe003e
+
+COCOAPODS: 0.39.0

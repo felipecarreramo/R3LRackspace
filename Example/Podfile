@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'R3LRackspace_Example', :exclusive => true do
+  pod "R3LRackspace", :path => "../"
+end
+
+target 'R3LRackspace_Tests', :exclusive => true do
+  pod "R3LRackspace", :path => "../"
+
+  
+end
