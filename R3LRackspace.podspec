@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name             = "R3LRackspace"
-  s.version          = "0.1.1"
+  s.version          = "0.1.2"
   s.summary          = "iOS SDK Rackspace in swift"
   s.description      = "iOS SDK Rackspace in swift to handle CloudFiles"
   s.homepage         = "https://github.com/felipecarreramo/R3LRackspace"
