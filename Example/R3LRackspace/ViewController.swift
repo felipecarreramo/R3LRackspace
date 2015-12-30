@@ -7,12 +7,41 @@
 //
 
 import UIKit
+import R3LRackspace
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let cloud = CloudFiles(username: "##username##", apiKey: "##ApiKey##", region: .Chicago)
+        let bundle = NSBundle.mainBundle()
+        let path = bundle.pathForResource("eye", ofType: "jpg")
+        if let path = path , let data = NSData(contentsOfFile: path) {
+            cloud.putObject(data, name: "eye.jpg", container: "##containerName##") { success in
+                
+                if success {
+                    
+                }
+                
+            }
+        }
+        
+        //cloud.createContainer("jugofresh-test-cdn")
+        //cloud.getPublicURL("jugofresh-test-cdn", name:"eye.jpg")
+        //cloud.getContainers()
+        
+        //cloud.enableContainerForCDN("jugofresh-test-cdn")
+        //cloud.getPublicContainers()
+//        cloud.getPublicURL("jugofresh-JC", name: "testImage.jpg") { urlObject in
+//            
+//            if let urlObject = urlObject {
+//                print(urlObject)
+//            }
+//            
+//        }
+        
+        //cloud.getContainer("jugofresh-JC")
     }
 
     override func didReceiveMemoryWarning() {
