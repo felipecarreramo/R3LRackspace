@@ -42,7 +42,7 @@ public class CloudFiles {
         self.region = region
         services = [CloudFilesCDN(), CloudFilesPrivate()]
         network = Network(authURL: CFConstants.AuthURL)
-        network.debug = true
+        network.debug = false
     }
     
     public func authenticate(completion: (authenticated: Bool)->()) {
@@ -132,6 +132,8 @@ public class CloudFiles {
                 if success {
                     self.authenticated = true
                     put()
+                }else {
+                    completion(success: false)
                 }
             }
         }
