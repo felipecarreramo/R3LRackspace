@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import Alamofire
 
 //HTTP calls
-public class Network: NSObject, NSURLSessionDelegate, NSURLSessionTaskDelegate, NSURLSessionDataDelegate {
+public class Network: NSObject {
     
     
     public var baseURL: String?
@@ -36,32 +37,23 @@ public class Network: NSObject, NSURLSessionDelegate, NSURLSessionTaskDelegate, 
     }
     
     
-    public func sendRequest(method: RSHTTPMethod, endpoint: String? = nil, params: [String:AnyObject]? = nil, headers: [String:AnyObject]? = nil, completion:(data: AnyObject?, response: NSHTTPURLResponse?, error:NSError?) -> ()) {
+    public func sendRequest(method: RSHTTPMethod, endpoint: String? = nil, params: [String: AnyObject]? = nil, headers: [String: String]? = nil, completion:(data: AnyObject?, response: NSHTTPURLResponse?, error: NSError?) -> ()) {
         
-        var url: NSURL?
-        var authContentType: String?
+        var url: String?
         if let endpoint = endpoint {
-            url = NSURL(string: "\(endpoint)")
+            url =  "\(endpoint)"
         }else if let baseURL =  baseURL {
-            url = NSURL(string: "\(baseURL)")
-            authContentType = "application/json"
-            
+            url = "\(baseURL)"
         }
         
         if let url = url {
             
-            let request: NSMutableURLRequest = NSMutableURLRequest(URL: url)
-            request.HTTPMethod = method.rawValue
-            
-            if let token = self.token {
-                request.addValue(token, forHTTPHeaderField: "X-Auth-Token")
-            }
+            var allHeaders = [String: String]()
             
             if let headers = headers {
-                for (key, header) in headers {
-                    if let header = header as? String {
-                        request.addValue(header, forHTTPHeaderField: key)
-                    }
+                
+                if let token = self.token {
+                    allHeaders["X-Auth-Token"] = token
                 }
                 
                 if self.debug {
@@ -81,96 +73,41 @@ public class Network: NSObject, NSURLSessionDelegate, NSURLSessionTaskDelegate, 
                     }
                     
                 }
-                
-                
-            }else {
-                if let authContentType = authContentType {
-                    request.addValue(authContentType, forHTTPHeaderField: "Content-type")
-                }
             }
             
-            if let params = params  {
-                request.HTTPBody = serializeParams(params)
-            }
+            var aMethod: Alamofire.Method?
             
-            if self.debug {
-                debugPrint(request)
-            }
-            
-            let session = NSURLSession.sharedSession()
-            let task: NSURLSessionTask = session.dataTaskWithRequest(request, completionHandler: { (data, response, error) in
+            switch method {
                 
-                if let error = error {
-                    if self.debug {
-                        print("Error: \(error.localizedDescription)")
-                    }
-                    
-                    completion(data: nil, response: nil, error: error)
-                }else  if let response = response as? NSHTTPURLResponse , let data = data {
-                    
-                    let dataDict: AnyObject?
-                    
-                    do {
-                        dataDict = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments)
-                    } catch {
-                        dataDict = nil
-                    }
-                    
-                    if self.debug {
+            case .POST:
+                aMethod = Alamofire.Method.POST
+            case .GET:
+                aMethod = Alamofire.Method.GET
+            case .PUT:
+                aMethod = Alamofire.Method.PUT
+            case .DELETE:
+                aMethod = Alamofire.Method.DELETE
+            case .HEAD :
+                aMethod = Alamofire.Method.HEAD
+            }
+            
+            if let aMethod = aMethod {
+                Alamofire.request(aMethod, url, parameters: params, encoding: ParameterEncoding.JSON, headers: allHeaders)
+                    .responseJSON() { response in
                         
-                        if let dataDict = dataDict {
-                            let jsonData: NSData?
-                            do {
-                                jsonData = try NSJSONSerialization.dataWithJSONObject(
-                                    dataDict ,
-                                    options: NSJSONWritingOptions.PrettyPrinted)
-                                
-                                if let jsonData = jsonData, let theJSONText = NSString(data: jsonData, encoding: NSASCIIStringEncoding) {
-                                    print("DEBUG OUTPUT RESPONSE = \n ", theJSONText)
-                                }
-                                
-                            } catch {
-                                
+                        switch response.result {
+                        case .Success(let data):
+                            print(data)
+                            completion(data: data, response: response.response, error: nil)
+                        case .Failure(let error):
+                            if self.debug {
+                                print("Error: \(error.localizedDescription)")
                             }
+                            completion(data: nil, response: nil, error: error)
                         }
-                    }
-                    
-                    if let dataDict = dataDict {
-                        completion(data: dataDict, response: response, error: error)
-                    }else {
-                        completion(data: data, response: response, error: error)
-                    }
                 }
-                
-            })
-            
-            task.resume()
-            
-        }
-    }
-    
-    private func serializeParams(params: [String: AnyObject]) -> NSData? {
-        
-        var data: NSData?
-        
-        do {
-            
-            data = try NSJSONSerialization.dataWithJSONObject(params, options: NSJSONWritingOptions.PrettyPrinted)
-            if debug {
-                
-                if let data = data, let jsonString = NSString(bytes: data.bytes, length: data.length, encoding: NSUTF8StringEncoding) as? String {
-                    print("DEBUG OUTPUT REQUEST = \n ", jsonString)
-                }
-                
             }
-            
-        } catch {
-            data = nil
         }
-        
-        
-        return data
-        
     }
     
     func uploadFile(data: NSData, url: NSURL, method: RSHTTPMethod, completion: (success: Bool)->()) {
@@ -186,42 +123,24 @@ public class Network: NSObject, NSURLSessionDelegate, NSURLSessionTaskDelegate, 
             request.addValue(token, forHTTPHeaderField: "X-Auth-Token")
         }
         
-        let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
-        let session =  NSURLSession(configuration: configuration, delegate: self, delegateQueue: NSOperationQueue.mainQueue())
-        let task = session.uploadTaskWithRequest(request, fromData: data)
-        task.resume()
-        
-    }
-    
-    
-    public func URLSession(session: NSURLSession, task: NSURLSessionTask, didCompleteWithError error: NSError?) {
-        if let error = error {
-            completionUpload?(success: false)
-            print("Session \(session) Error ocurred: ", error.userInfo )
-        }else {
-            completionUpload?(success: true)
-            print("Session \(session) upload completed, response \(NSString(data: responseData, encoding: NSUTF8StringEncoding))")
+        Alamofire.upload(request, data: data)
+            .response { request, response, data, error in
+                if let error = error {
+                    self.completionUpload?(success: false)
+                    if self.debug {
+                        print("Error ocurred: ", error.userInfo )
+                    }
+                    
+                }else {
+                    self.completionUpload?(success: true)
+                    if self.debug {
+                        print("upload completed")
+                    }
+                    
+                }
         }
-    }
-    
-    
-    
-    public func URLSession(session: NSURLSession, task: NSURLSessionTask, didSendBodyData bytesSent: Int64, totalBytesSent: Int64, totalBytesExpectedToSend: Int64) {
-        
-        let uploadProgress = Double(totalBytesSent) / Double(totalBytesExpectedToSend)
-        print("session \(session) uploaded: \(uploadProgress * 100)%")
         
     }
-    
-    public func URLSession(session: NSURLSession, dataTask: NSURLSessionDataTask, didReceiveResponse response: NSURLResponse, completionHandler: (NSURLSessionResponseDisposition) -> Void) {
-        print("session \(session), received response \(response)")
-        completionHandler(NSURLSessionResponseDisposition.Allow)
-    }
-    
-    public func URLSession(session: NSURLSession, dataTask: NSURLSessionDataTask, didReceiveData data: NSData) {
-        responseData.appendData(data)
-    }
-    
     
     private func mimeType(data: NSData) -> String {
         var c = [UInt32](count: 1, repeatedValue: 0)
@@ -246,13 +165,4 @@ public class Network: NSObject, NSURLSessionDelegate, NSURLSessionTaskDelegate, 
         }
     }
     
-    
-    
 }
-
-
-
-
-
-
-

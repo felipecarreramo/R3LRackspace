@@ -29,6 +29,8 @@ public class CloudFiles {
     public var username: String?
     public var apiKey: String?
     
+    public var debug = false
+    
     private var token: String?
     private var tenant: [String: String] = [:]
     private var endpoint:String?
@@ -42,7 +44,7 @@ public class CloudFiles {
         self.region = region
         services = [CloudFilesCDN(), CloudFilesPrivate()]
         network = Network(authURL: CFConstants.AuthURL)
-        network.debug = false
+        network.debug = self.debug
     }
     
     public func authenticate(completion: (authenticated: Bool)->()) {
