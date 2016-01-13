@@ -7,24 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		10A0EF0AC7760CCA6B813C25027F8BED /* CFConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B15823D84DA93F9F7586F393D3859C /* CFConstants.swift */; };
-		136EBAF7469E9E7922F498CA0C560411 /* CloudFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD4B717888957DB765CBC32765E2230 /* CloudFiles.swift */; };
-		17395735F550F118D683B9AABB52CDC8 /* CFContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD923446AC2CE6DA7F15764295D15B /* CFContainer.swift */; };
 		1C924F97615A28D471841B4690447CBA /* Pods-R3LRackspace_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 50722E74A743926C053C7CE7D0D6EF6B /* Pods-R3LRackspace_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		21016C6D4AEAB1E63F221FF2CA178469 /* Pods-R3LRackspace_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E67F373F68016E9602E754875F5C8D /* Pods-R3LRackspace_Example-dummy.m */; };
 		296D9CB4CAF07BD79C7F092DF72D3C7F /* Pods-R3LRackspace_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AD7FB10BF09F44E60BD97276806826A /* Pods-R3LRackspace_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4D0A46C5832839FFFD64023D64D89B43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		6026F173ED77EFE3597DA1BDEC6C97F8 /* R3LRackspace-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BBA582E41736DF45B6BA52D10A3BF6E /* R3LRackspace-dummy.m */; };
-		66649CD9C971876E26299E5AFEB5131E /* CloudFilesCDN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AF51881C9FBC3E7171FAB365995FAD /* CloudFilesCDN.swift */; };
-		6D0860ED3424D59DE2A3F08ECC2A8B73 /* ServiceCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B88EF3C7AE5FB3304A8880E21F0C7DC /* ServiceCatalog.swift */; };
 		78604243CEE5A1D200FB39C180BF8228 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		8A19BFBB94E45EAE036F795FC520B1B5 /* Pods-R3LRackspace_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F7D5E8341D05D4FC4286E11227C7B4 /* Pods-R3LRackspace_Tests-dummy.m */; };
-		93D6125E8FD4CB164FB12836D957641A /* CloudFilesPrivate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AC59E26A55BCF422983F12C0C1E954 /* CloudFilesPrivate.swift */; };
-		A1B5BE9579CBD239D32C8539324CFD01 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CD960DF7C16E1F481887AFAA53ADE5 /* Network.swift */; };
 		B026DE0F85F987F0E3E0B69F55600C8E /* R3LRackspace-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BCF1A5978FB3FFED9C8EEEDF07597563 /* R3LRackspace-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C78058181C470003009E1E0B /* CFConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78058101C470003009E1E0B /* CFConstants.swift */; };
+		C78058191C470003009E1E0B /* CFContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78058111C470003009E1E0B /* CFContainer.swift */; };
+		C780581A1C470003009E1E0B /* CFObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78058121C470003009E1E0B /* CFObject.swift */; };
+		C780581B1C470003009E1E0B /* CloudFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78058131C470003009E1E0B /* CloudFiles.swift */; };
+		C780581C1C470003009E1E0B /* CloudFilesCDN.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78058141C470003009E1E0B /* CloudFilesCDN.swift */; };
+		C780581D1C470003009E1E0B /* CloudFilesPrivate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78058151C470003009E1E0B /* CloudFilesPrivate.swift */; };
+		C780581E1C470003009E1E0B /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78058161C470003009E1E0B /* Network.swift */; };
+		C780581F1C470003009E1E0B /* ServiceCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78058171C470003009E1E0B /* ServiceCatalog.swift */; };
+		C78058281C470015009E1E0B /* CFConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78058201C470015009E1E0B /* CFConstants.swift */; };
+		C78058291C470015009E1E0B /* CFContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78058211C470015009E1E0B /* CFContainer.swift */; };
+		C780582A1C470015009E1E0B /* CFObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78058221C470015009E1E0B /* CFObject.swift */; };
+		C780582B1C470015009E1E0B /* CloudFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78058231C470015009E1E0B /* CloudFiles.swift */; };
+		C780582C1C470015009E1E0B /* CloudFilesCDN.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78058241C470015009E1E0B /* CloudFilesCDN.swift */; };
+		C780582D1C470015009E1E0B /* CloudFilesPrivate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78058251C470015009E1E0B /* CloudFilesPrivate.swift */; };
+		C780582E1C470015009E1E0B /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78058261C470015009E1E0B /* Network.swift */; };
+		C780582F1C470015009E1E0B /* ServiceCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78058271C470015009E1E0B /* ServiceCatalog.swift */; };
 		D25238089CBB98770C920AC9D745679C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		D72E6691B04CB6DDF2E0EE0336C8AFFC /* R3LRackspace.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 85BFDD20812F3D335B345F65ECA7AD48 /* R3LRackspace.bundle */; };
-		FFA9AB95DA793060E4BD9DFD377392DF /* CFObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1815CEBD3A7FB48A91157CB80BE768 /* CFObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,9 +64,7 @@
 		11F7D5E8341D05D4FC4286E11227C7B4 /* Pods-R3LRackspace_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-R3LRackspace_Tests-dummy.m"; sourceTree = "<group>"; };
 		183C746DE24D3990A867473274C9554F /* Pods-R3LRackspace_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-R3LRackspace_Example-resources.sh"; sourceTree = "<group>"; };
 		186AB61A39161DFFBBE9246CFE8C5C5E /* Pods-R3LRackspace_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-R3LRackspace_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		24AF51881C9FBC3E7171FAB365995FAD /* CloudFilesCDN.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CloudFilesCDN.swift; sourceTree = "<group>"; };
 		28E67F373F68016E9602E754875F5C8D /* Pods-R3LRackspace_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-R3LRackspace_Example-dummy.m"; sourceTree = "<group>"; };
-		2DD4B717888957DB765CBC32765E2230 /* CloudFiles.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CloudFiles.swift; sourceTree = "<group>"; };
 		3625572D6D4038E503BEA0B305ADBD79 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38C19EB01728CA3272F982487F970786 /* Pods-R3LRackspace_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-R3LRackspace_Example.modulemap"; sourceTree = "<group>"; };
 		3A50C029B8F0530EF3A49833D5F120B0 /* Pods_R3LRackspace_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_R3LRackspace_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,18 +72,13 @@
 		45FEA918EDFB2C196CCD85C0D4836DE9 /* R3LRackspace.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = R3LRackspace.xcconfig; sourceTree = "<group>"; };
 		4BBA582E41736DF45B6BA52D10A3BF6E /* R3LRackspace-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "R3LRackspace-dummy.m"; sourceTree = "<group>"; };
 		50722E74A743926C053C7CE7D0D6EF6B /* Pods-R3LRackspace_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-R3LRackspace_Tests-umbrella.h"; sourceTree = "<group>"; };
-		51CD960DF7C16E1F481887AFAA53ADE5 /* Network.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
-		57AC59E26A55BCF422983F12C0C1E954 /* CloudFilesPrivate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CloudFilesPrivate.swift; sourceTree = "<group>"; };
 		6241F9179C26D2759E90985F66DDE378 /* Pods-R3LRackspace_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-R3LRackspace_Example.release.xcconfig"; sourceTree = "<group>"; };
-		6ABD923446AC2CE6DA7F15764295D15B /* CFContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CFContainer.swift; sourceTree = "<group>"; };
 		6B5F69F43AA8AE520E5CDFBF47A24248 /* R3LRackspace.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = R3LRackspace.modulemap; sourceTree = "<group>"; };
 		73583CCBC280AAACEA271E8DEBE1AFAB /* R3LRackspace-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "R3LRackspace-prefix.pch"; sourceTree = "<group>"; };
 		73D63EEABC50421B01912EEC24843D79 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		78B15823D84DA93F9F7586F393D3859C /* CFConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CFConstants.swift; sourceTree = "<group>"; };
 		7AD7FB10BF09F44E60BD97276806826A /* Pods-R3LRackspace_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-R3LRackspace_Example-umbrella.h"; sourceTree = "<group>"; };
 		84DB5908AA45001C6DD8711482E493E7 /* Pods-R3LRackspace_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-R3LRackspace_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		85BFDD20812F3D335B345F65ECA7AD48 /* R3LRackspace.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = R3LRackspace.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		8B88EF3C7AE5FB3304A8880E21F0C7DC /* ServiceCatalog.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ServiceCatalog.swift; sourceTree = "<group>"; };
 		8E5F3AF91473A8586B6E8C64EAB5A5FA /* Pods-R3LRackspace_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-R3LRackspace_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		927EDD56BFEB128B60724C681B023C6C /* Pods_R3LRackspace_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_R3LRackspace_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A02458D4A1753AB5FA4732EE2578900D /* R3LRackspace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = R3LRackspace.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,8 +89,23 @@
 		C3AA26C647829673B33DFB920AC58766 /* Pods-R3LRackspace_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-R3LRackspace_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		C5B1D2DEB34B47D81F3B707B3AD5AA3C /* Pods-R3LRackspace_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-R3LRackspace_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C75CEF44BB32D60B132342DEC0A342DF /* Pods-R3LRackspace_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-R3LRackspace_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		C78058101C470003009E1E0B /* CFConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CFConstants.swift; path = Alamofire/CFConstants.swift; sourceTree = "<group>"; };
+		C78058111C470003009E1E0B /* CFContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CFContainer.swift; path = Alamofire/CFContainer.swift; sourceTree = "<group>"; };
+		C78058121C470003009E1E0B /* CFObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CFObject.swift; path = Alamofire/CFObject.swift; sourceTree = "<group>"; };
+		C78058131C470003009E1E0B /* CloudFiles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CloudFiles.swift; path = Alamofire/CloudFiles.swift; sourceTree = "<group>"; };
+		C78058141C470003009E1E0B /* CloudFilesCDN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CloudFilesCDN.swift; path = Alamofire/CloudFilesCDN.swift; sourceTree = "<group>"; };
+		C78058151C470003009E1E0B /* CloudFilesPrivate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CloudFilesPrivate.swift; path = Alamofire/CloudFilesPrivate.swift; sourceTree = "<group>"; };
+		C78058161C470003009E1E0B /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Network.swift; path = Alamofire/Network.swift; sourceTree = "<group>"; };
+		C78058171C470003009E1E0B /* ServiceCatalog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceCatalog.swift; path = Alamofire/ServiceCatalog.swift; sourceTree = "<group>"; };
+		C78058201C470015009E1E0B /* CFConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CFConstants.swift; path = WithoutDependencies/CFConstants.swift; sourceTree = "<group>"; };
+		C78058211C470015009E1E0B /* CFContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CFContainer.swift; path = WithoutDependencies/CFContainer.swift; sourceTree = "<group>"; };
+		C78058221C470015009E1E0B /* CFObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CFObject.swift; path = WithoutDependencies/CFObject.swift; sourceTree = "<group>"; };
+		C78058231C470015009E1E0B /* CloudFiles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CloudFiles.swift; path = WithoutDependencies/CloudFiles.swift; sourceTree = "<group>"; };
+		C78058241C470015009E1E0B /* CloudFilesCDN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CloudFilesCDN.swift; path = WithoutDependencies/CloudFilesCDN.swift; sourceTree = "<group>"; };
+		C78058251C470015009E1E0B /* CloudFilesPrivate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CloudFilesPrivate.swift; path = WithoutDependencies/CloudFilesPrivate.swift; sourceTree = "<group>"; };
+		C78058261C470015009E1E0B /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Network.swift; path = WithoutDependencies/Network.swift; sourceTree = "<group>"; };
+		C78058271C470015009E1E0B /* ServiceCatalog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceCatalog.swift; path = WithoutDependencies/ServiceCatalog.swift; sourceTree = "<group>"; };
 		CCFD4947E3B09CE43237B45AFEAE8160 /* Pods-R3LRackspace_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-R3LRackspace_Tests-resources.sh"; sourceTree = "<group>"; };
-		DB1815CEBD3A7FB48A91157CB80BE768 /* CFObject.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CFObject.swift; sourceTree = "<group>"; };
 		F465A06B42BBFCB9866971C5E10AA898 /* Pods-R3LRackspace_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-R3LRackspace_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		FB8719FA47926B5671C654705746FEFA /* Pods-R3LRackspace_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-R3LRackspace_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -229,14 +245,8 @@
 		AFF10B24655CC85542C8B970C640A7DB /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				78B15823D84DA93F9F7586F393D3859C /* CFConstants.swift */,
-				6ABD923446AC2CE6DA7F15764295D15B /* CFContainer.swift */,
-				DB1815CEBD3A7FB48A91157CB80BE768 /* CFObject.swift */,
-				2DD4B717888957DB765CBC32765E2230 /* CloudFiles.swift */,
-				24AF51881C9FBC3E7171FAB365995FAD /* CloudFilesCDN.swift */,
-				57AC59E26A55BCF422983F12C0C1E954 /* CloudFilesPrivate.swift */,
-				51CD960DF7C16E1F481887AFAA53ADE5 /* Network.swift */,
-				8B88EF3C7AE5FB3304A8880E21F0C7DC /* ServiceCatalog.swift */,
+				C780580F1C46FF6B009E1E0B /* Alamofire */,
+				C780580E1C46FF59009E1E0B /* WithoutDependencies */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -255,6 +265,36 @@
 				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		C780580E1C46FF59009E1E0B /* WithoutDependencies */ = {
+			isa = PBXGroup;
+			children = (
+				C78058201C470015009E1E0B /* CFConstants.swift */,
+				C78058211C470015009E1E0B /* CFContainer.swift */,
+				C78058221C470015009E1E0B /* CFObject.swift */,
+				C78058231C470015009E1E0B /* CloudFiles.swift */,
+				C78058241C470015009E1E0B /* CloudFilesCDN.swift */,
+				C78058251C470015009E1E0B /* CloudFilesPrivate.swift */,
+				C78058261C470015009E1E0B /* Network.swift */,
+				C78058271C470015009E1E0B /* ServiceCatalog.swift */,
+			);
+			name = WithoutDependencies;
+			sourceTree = "<group>";
+		};
+		C780580F1C46FF6B009E1E0B /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				C78058101C470003009E1E0B /* CFConstants.swift */,
+				C78058111C470003009E1E0B /* CFContainer.swift */,
+				C78058121C470003009E1E0B /* CFObject.swift */,
+				C78058131C470003009E1E0B /* CloudFiles.swift */,
+				C78058141C470003009E1E0B /* CloudFilesCDN.swift */,
+				C78058151C470003009E1E0B /* CloudFilesPrivate.swift */,
+				C78058161C470003009E1E0B /* Network.swift */,
+				C78058171C470003009E1E0B /* ServiceCatalog.swift */,
+			);
+			name = Alamofire;
 			sourceTree = "<group>";
 		};
 		F9598F8D1AC30CCDDA9BA97159D7E0F0 /* R3LRackspace */ = {
@@ -375,7 +415,7 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0700;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
@@ -428,7 +468,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C780582D1C470015009E1E0B /* CloudFilesPrivate.swift in Sources */,
+				C78058281C470015009E1E0B /* CFConstants.swift in Sources */,
+				C780582E1C470015009E1E0B /* Network.swift in Sources */,
+				C78058291C470015009E1E0B /* CFContainer.swift in Sources */,
+				C780582B1C470015009E1E0B /* CloudFiles.swift in Sources */,
+				C780582F1C470015009E1E0B /* ServiceCatalog.swift in Sources */,
+				C78058181C470003009E1E0B /* CFConstants.swift in Sources */,
+				C780581F1C470003009E1E0B /* ServiceCatalog.swift in Sources */,
+				C780581A1C470003009E1E0B /* CFObject.swift in Sources */,
+				C780582A1C470015009E1E0B /* CFObject.swift in Sources */,
+				C780582C1C470015009E1E0B /* CloudFilesCDN.swift in Sources */,
+				C780581E1C470003009E1E0B /* Network.swift in Sources */,
 				21016C6D4AEAB1E63F221FF2CA178469 /* Pods-R3LRackspace_Example-dummy.m in Sources */,
+				C780581B1C470003009E1E0B /* CloudFiles.swift in Sources */,
+				C78058191C470003009E1E0B /* CFContainer.swift in Sources */,
+				C780581D1C470003009E1E0B /* CloudFilesPrivate.swift in Sources */,
+				C780581C1C470003009E1E0B /* CloudFilesCDN.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,15 +500,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10A0EF0AC7760CCA6B813C25027F8BED /* CFConstants.swift in Sources */,
-				17395735F550F118D683B9AABB52CDC8 /* CFContainer.swift in Sources */,
-				FFA9AB95DA793060E4BD9DFD377392DF /* CFObject.swift in Sources */,
-				136EBAF7469E9E7922F498CA0C560411 /* CloudFiles.swift in Sources */,
-				66649CD9C971876E26299E5AFEB5131E /* CloudFilesCDN.swift in Sources */,
-				93D6125E8FD4CB164FB12836D957641A /* CloudFilesPrivate.swift in Sources */,
-				A1B5BE9579CBD239D32C8539324CFD01 /* Network.swift in Sources */,
 				6026F173ED77EFE3597DA1BDEC6C97F8 /* R3LRackspace-dummy.m in Sources */,
-				6D0860ED3424D59DE2A3F08ECC2A8B73 /* ServiceCatalog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,6 +623,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6241F9179C26D2759E90985F66DDE378 /* Pods-R3LRackspace_Example.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -605,6 +654,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 186AB61A39161DFFBBE9246CFE8C5C5E /* Pods-R3LRackspace_Example.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;

@@ -34,7 +34,7 @@ public class Network: NSObject, NSURLSessionDelegate, NSURLSessionTaskDelegate, 
     public init(authURL: String) {
         self.baseURL = authURL
     }
-
+    
     
     public func sendRequest(method: RSHTTPMethod, endpoint: String? = nil, params: [String:AnyObject]? = nil, headers: [String:AnyObject]? = nil, completion:(data: AnyObject?, response: NSHTTPURLResponse?, error:NSError?) -> ()) {
         
@@ -45,7 +45,7 @@ public class Network: NSObject, NSURLSessionDelegate, NSURLSessionTaskDelegate, 
         }else if let baseURL =  baseURL {
             url = NSURL(string: "\(baseURL)")
             authContentType = "application/json"
-
+            
         }
         
         if let url = url {
@@ -85,7 +85,7 @@ public class Network: NSObject, NSURLSessionDelegate, NSURLSessionTaskDelegate, 
                 
             }else {
                 if let authContentType = authContentType {
-                   request.addValue(authContentType, forHTTPHeaderField: "Content-type")
+                    request.addValue(authContentType, forHTTPHeaderField: "Content-type")
                 }
             }
             
@@ -105,11 +105,8 @@ public class Network: NSObject, NSURLSessionDelegate, NSURLSessionTaskDelegate, 
                         print("Error: \(error.localizedDescription)")
                     }
                     
-                    completion(data: data, response: (response as? NSHTTPURLResponse), error: error)
-                }
-                
-                
-                if let response = response as? NSHTTPURLResponse , let data = data {
+                    completion(data: nil, response: nil, error: error)
+                }else  if let response = response as? NSHTTPURLResponse , let data = data {
                     
                     let dataDict: AnyObject?
                     
@@ -118,7 +115,7 @@ public class Network: NSObject, NSURLSessionDelegate, NSURLSessionTaskDelegate, 
                     } catch {
                         dataDict = nil
                     }
-                
+                    
                     if self.debug {
                         
                         if let dataDict = dataDict {
@@ -195,6 +192,7 @@ public class Network: NSObject, NSURLSessionDelegate, NSURLSessionTaskDelegate, 
         task.resume()
         
     }
+    
     
     public func URLSession(session: NSURLSession, task: NSURLSessionTask, didCompleteWithError error: NSError?) {
         if let error = error {
