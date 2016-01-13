@@ -36,7 +36,7 @@ public class Network: NSObject, NSURLSessionDelegate, NSURLSessionTaskDelegate, 
     }
 
     
-    public func sendRequest(method: RSHTTPMethod, endpoint: String? = nil, params: [String:AnyObject]? = nil, headers: [String:AnyObject]? = nil, completion:(data: AnyObject?, response: NSHTTPURLResponse, error:NSError?) -> ()) {
+    public func sendRequest(method: RSHTTPMethod, endpoint: String? = nil, params: [String:AnyObject]? = nil, headers: [String:AnyObject]? = nil, completion:(data: AnyObject?, response: NSHTTPURLResponse?, error:NSError?) -> ()) {
         
         var url: NSURL?
         var authContentType: String?
@@ -100,11 +100,14 @@ public class Network: NSObject, NSURLSessionDelegate, NSURLSessionTaskDelegate, 
             let session = NSURLSession.sharedSession()
             let task: NSURLSessionTask = session.dataTaskWithRequest(request, completionHandler: { (data, response, error) in
                 
-                if self.debug {
-                    if let error = error {
+                if let error = error {
+                    if self.debug {
                         print("Error: \(error.localizedDescription)")
                     }
+                    
+                    completion(data: data, response: (response as? NSHTTPURLResponse), error: error)
                 }
+                
                 
                 if let response = response as? NSHTTPURLResponse , let data = data {
                     

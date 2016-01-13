@@ -298,11 +298,11 @@ public class CloudFiles {
                 endpoint: "\(endpoint)/\(containerName)",
                 completion: { (data, response, error) -> () in
                     
-                    print(response)
+                    
                     if let _ = error {
                         completionInfo(urlString: nil)
                     }else {
-                        if let headers = response.allHeaderFields as? [String: AnyObject] {
+                        if let response = response, let headers = response.allHeaderFields as? [String: AnyObject] {
                             let urlString = headers["X-Cdn-Ssl-Uri"] as? String
                             completionInfo(urlString: urlString)
                         }
