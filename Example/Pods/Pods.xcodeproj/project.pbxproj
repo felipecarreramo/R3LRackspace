@@ -13,24 +13,16 @@
 		4D0A46C5832839FFFD64023D64D89B43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		6026F173ED77EFE3597DA1BDEC6C97F8 /* R3LRackspace-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BBA582E41736DF45B6BA52D10A3BF6E /* R3LRackspace-dummy.m */; };
 		78604243CEE5A1D200FB39C180BF8228 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		7E2E59FC1C47E814006ABB98 /* CFConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E59F41C47E814006ABB98 /* CFConstants.swift */; };
+		7E2E59FD1C47E814006ABB98 /* CFContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E59F51C47E814006ABB98 /* CFContainer.swift */; };
+		7E2E59FE1C47E814006ABB98 /* CFObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E59F61C47E814006ABB98 /* CFObject.swift */; };
+		7E2E59FF1C47E814006ABB98 /* CloudFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E59F71C47E814006ABB98 /* CloudFiles.swift */; };
+		7E2E5A001C47E814006ABB98 /* CloudFilesCDN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E59F81C47E814006ABB98 /* CloudFilesCDN.swift */; };
+		7E2E5A011C47E814006ABB98 /* CloudFilesPrivate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E59F91C47E814006ABB98 /* CloudFilesPrivate.swift */; };
+		7E2E5A021C47E814006ABB98 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E59FA1C47E814006ABB98 /* Network.swift */; };
+		7E2E5A031C47E814006ABB98 /* ServiceCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E59FB1C47E814006ABB98 /* ServiceCatalog.swift */; };
 		8A19BFBB94E45EAE036F795FC520B1B5 /* Pods-R3LRackspace_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F7D5E8341D05D4FC4286E11227C7B4 /* Pods-R3LRackspace_Tests-dummy.m */; };
 		B026DE0F85F987F0E3E0B69F55600C8E /* R3LRackspace-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BCF1A5978FB3FFED9C8EEEDF07597563 /* R3LRackspace-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C78058181C470003009E1E0B /* CFConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78058101C470003009E1E0B /* CFConstants.swift */; };
-		C78058191C470003009E1E0B /* CFContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78058111C470003009E1E0B /* CFContainer.swift */; };
-		C780581A1C470003009E1E0B /* CFObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78058121C470003009E1E0B /* CFObject.swift */; };
-		C780581B1C470003009E1E0B /* CloudFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78058131C470003009E1E0B /* CloudFiles.swift */; };
-		C780581C1C470003009E1E0B /* CloudFilesCDN.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78058141C470003009E1E0B /* CloudFilesCDN.swift */; };
-		C780581D1C470003009E1E0B /* CloudFilesPrivate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78058151C470003009E1E0B /* CloudFilesPrivate.swift */; };
-		C780581E1C470003009E1E0B /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78058161C470003009E1E0B /* Network.swift */; };
-		C780581F1C470003009E1E0B /* ServiceCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78058171C470003009E1E0B /* ServiceCatalog.swift */; };
-		C78058281C470015009E1E0B /* CFConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78058201C470015009E1E0B /* CFConstants.swift */; };
-		C78058291C470015009E1E0B /* CFContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78058211C470015009E1E0B /* CFContainer.swift */; };
-		C780582A1C470015009E1E0B /* CFObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78058221C470015009E1E0B /* CFObject.swift */; };
-		C780582B1C470015009E1E0B /* CloudFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78058231C470015009E1E0B /* CloudFiles.swift */; };
-		C780582C1C470015009E1E0B /* CloudFilesCDN.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78058241C470015009E1E0B /* CloudFilesCDN.swift */; };
-		C780582D1C470015009E1E0B /* CloudFilesPrivate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78058251C470015009E1E0B /* CloudFilesPrivate.swift */; };
-		C780582E1C470015009E1E0B /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78058261C470015009E1E0B /* Network.swift */; };
-		C780582F1C470015009E1E0B /* ServiceCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78058271C470015009E1E0B /* ServiceCatalog.swift */; };
 		D25238089CBB98770C920AC9D745679C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		D72E6691B04CB6DDF2E0EE0336C8AFFC /* R3LRackspace.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 85BFDD20812F3D335B345F65ECA7AD48 /* R3LRackspace.bundle */; };
 /* End PBXBuildFile section */
@@ -77,6 +69,14 @@
 		73583CCBC280AAACEA271E8DEBE1AFAB /* R3LRackspace-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "R3LRackspace-prefix.pch"; sourceTree = "<group>"; };
 		73D63EEABC50421B01912EEC24843D79 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7AD7FB10BF09F44E60BD97276806826A /* Pods-R3LRackspace_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-R3LRackspace_Example-umbrella.h"; sourceTree = "<group>"; };
+		7E2E59F41C47E814006ABB98 /* CFConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFConstants.swift; sourceTree = "<group>"; };
+		7E2E59F51C47E814006ABB98 /* CFContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFContainer.swift; sourceTree = "<group>"; };
+		7E2E59F61C47E814006ABB98 /* CFObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFObject.swift; sourceTree = "<group>"; };
+		7E2E59F71C47E814006ABB98 /* CloudFiles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudFiles.swift; sourceTree = "<group>"; };
+		7E2E59F81C47E814006ABB98 /* CloudFilesCDN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudFilesCDN.swift; sourceTree = "<group>"; };
+		7E2E59F91C47E814006ABB98 /* CloudFilesPrivate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudFilesPrivate.swift; sourceTree = "<group>"; };
+		7E2E59FA1C47E814006ABB98 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		7E2E59FB1C47E814006ABB98 /* ServiceCatalog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceCatalog.swift; sourceTree = "<group>"; };
 		84DB5908AA45001C6DD8711482E493E7 /* Pods-R3LRackspace_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-R3LRackspace_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		85BFDD20812F3D335B345F65ECA7AD48 /* R3LRackspace.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = R3LRackspace.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E5F3AF91473A8586B6E8C64EAB5A5FA /* Pods-R3LRackspace_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-R3LRackspace_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -89,22 +89,6 @@
 		C3AA26C647829673B33DFB920AC58766 /* Pods-R3LRackspace_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-R3LRackspace_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		C5B1D2DEB34B47D81F3B707B3AD5AA3C /* Pods-R3LRackspace_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-R3LRackspace_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C75CEF44BB32D60B132342DEC0A342DF /* Pods-R3LRackspace_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-R3LRackspace_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		C78058101C470003009E1E0B /* CFConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CFConstants.swift; path = Alamofire/CFConstants.swift; sourceTree = "<group>"; };
-		C78058111C470003009E1E0B /* CFContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CFContainer.swift; path = Alamofire/CFContainer.swift; sourceTree = "<group>"; };
-		C78058121C470003009E1E0B /* CFObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CFObject.swift; path = Alamofire/CFObject.swift; sourceTree = "<group>"; };
-		C78058131C470003009E1E0B /* CloudFiles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CloudFiles.swift; path = Alamofire/CloudFiles.swift; sourceTree = "<group>"; };
-		C78058141C470003009E1E0B /* CloudFilesCDN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CloudFilesCDN.swift; path = Alamofire/CloudFilesCDN.swift; sourceTree = "<group>"; };
-		C78058151C470003009E1E0B /* CloudFilesPrivate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CloudFilesPrivate.swift; path = Alamofire/CloudFilesPrivate.swift; sourceTree = "<group>"; };
-		C78058161C470003009E1E0B /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Network.swift; path = Alamofire/Network.swift; sourceTree = "<group>"; };
-		C78058171C470003009E1E0B /* ServiceCatalog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceCatalog.swift; path = Alamofire/ServiceCatalog.swift; sourceTree = "<group>"; };
-		C78058201C470015009E1E0B /* CFConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CFConstants.swift; path = WithoutDependencies/CFConstants.swift; sourceTree = "<group>"; };
-		C78058211C470015009E1E0B /* CFContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CFContainer.swift; path = WithoutDependencies/CFContainer.swift; sourceTree = "<group>"; };
-		C78058221C470015009E1E0B /* CFObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CFObject.swift; path = WithoutDependencies/CFObject.swift; sourceTree = "<group>"; };
-		C78058231C470015009E1E0B /* CloudFiles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CloudFiles.swift; path = WithoutDependencies/CloudFiles.swift; sourceTree = "<group>"; };
-		C78058241C470015009E1E0B /* CloudFilesCDN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CloudFilesCDN.swift; path = WithoutDependencies/CloudFilesCDN.swift; sourceTree = "<group>"; };
-		C78058251C470015009E1E0B /* CloudFilesPrivate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CloudFilesPrivate.swift; path = WithoutDependencies/CloudFilesPrivate.swift; sourceTree = "<group>"; };
-		C78058261C470015009E1E0B /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Network.swift; path = WithoutDependencies/Network.swift; sourceTree = "<group>"; };
-		C78058271C470015009E1E0B /* ServiceCatalog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceCatalog.swift; path = WithoutDependencies/ServiceCatalog.swift; sourceTree = "<group>"; };
 		CCFD4947E3B09CE43237B45AFEAE8160 /* Pods-R3LRackspace_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-R3LRackspace_Tests-resources.sh"; sourceTree = "<group>"; };
 		F465A06B42BBFCB9866971C5E10AA898 /* Pods-R3LRackspace_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-R3LRackspace_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		FB8719FA47926B5671C654705746FEFA /* Pods-R3LRackspace_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-R3LRackspace_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -245,8 +229,14 @@
 		AFF10B24655CC85542C8B970C640A7DB /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				C780580F1C46FF6B009E1E0B /* Alamofire */,
-				C780580E1C46FF59009E1E0B /* WithoutDependencies */,
+				7E2E59F41C47E814006ABB98 /* CFConstants.swift */,
+				7E2E59F51C47E814006ABB98 /* CFContainer.swift */,
+				7E2E59F61C47E814006ABB98 /* CFObject.swift */,
+				7E2E59F71C47E814006ABB98 /* CloudFiles.swift */,
+				7E2E59F81C47E814006ABB98 /* CloudFilesCDN.swift */,
+				7E2E59F91C47E814006ABB98 /* CloudFilesPrivate.swift */,
+				7E2E59FA1C47E814006ABB98 /* Network.swift */,
+				7E2E59FB1C47E814006ABB98 /* ServiceCatalog.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -265,36 +255,6 @@
 				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		C780580E1C46FF59009E1E0B /* WithoutDependencies */ = {
-			isa = PBXGroup;
-			children = (
-				C78058201C470015009E1E0B /* CFConstants.swift */,
-				C78058211C470015009E1E0B /* CFContainer.swift */,
-				C78058221C470015009E1E0B /* CFObject.swift */,
-				C78058231C470015009E1E0B /* CloudFiles.swift */,
-				C78058241C470015009E1E0B /* CloudFilesCDN.swift */,
-				C78058251C470015009E1E0B /* CloudFilesPrivate.swift */,
-				C78058261C470015009E1E0B /* Network.swift */,
-				C78058271C470015009E1E0B /* ServiceCatalog.swift */,
-			);
-			name = WithoutDependencies;
-			sourceTree = "<group>";
-		};
-		C780580F1C46FF6B009E1E0B /* Alamofire */ = {
-			isa = PBXGroup;
-			children = (
-				C78058101C470003009E1E0B /* CFConstants.swift */,
-				C78058111C470003009E1E0B /* CFContainer.swift */,
-				C78058121C470003009E1E0B /* CFObject.swift */,
-				C78058131C470003009E1E0B /* CloudFiles.swift */,
-				C78058141C470003009E1E0B /* CloudFilesCDN.swift */,
-				C78058151C470003009E1E0B /* CloudFilesPrivate.swift */,
-				C78058161C470003009E1E0B /* Network.swift */,
-				C78058171C470003009E1E0B /* ServiceCatalog.swift */,
-			);
-			name = Alamofire;
 			sourceTree = "<group>";
 		};
 		F9598F8D1AC30CCDDA9BA97159D7E0F0 /* R3LRackspace */ = {
@@ -468,23 +428,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C780582D1C470015009E1E0B /* CloudFilesPrivate.swift in Sources */,
-				C78058281C470015009E1E0B /* CFConstants.swift in Sources */,
-				C780582E1C470015009E1E0B /* Network.swift in Sources */,
-				C78058291C470015009E1E0B /* CFContainer.swift in Sources */,
-				C780582B1C470015009E1E0B /* CloudFiles.swift in Sources */,
-				C780582F1C470015009E1E0B /* ServiceCatalog.swift in Sources */,
-				C78058181C470003009E1E0B /* CFConstants.swift in Sources */,
-				C780581F1C470003009E1E0B /* ServiceCatalog.swift in Sources */,
-				C780581A1C470003009E1E0B /* CFObject.swift in Sources */,
-				C780582A1C470015009E1E0B /* CFObject.swift in Sources */,
-				C780582C1C470015009E1E0B /* CloudFilesCDN.swift in Sources */,
-				C780581E1C470003009E1E0B /* Network.swift in Sources */,
+				7E2E59FC1C47E814006ABB98 /* CFConstants.swift in Sources */,
+				7E2E5A031C47E814006ABB98 /* ServiceCatalog.swift in Sources */,
+				7E2E59FE1C47E814006ABB98 /* CFObject.swift in Sources */,
+				7E2E5A021C47E814006ABB98 /* Network.swift in Sources */,
 				21016C6D4AEAB1E63F221FF2CA178469 /* Pods-R3LRackspace_Example-dummy.m in Sources */,
-				C780581B1C470003009E1E0B /* CloudFiles.swift in Sources */,
-				C78058191C470003009E1E0B /* CFContainer.swift in Sources */,
-				C780581D1C470003009E1E0B /* CloudFilesPrivate.swift in Sources */,
-				C780581C1C470003009E1E0B /* CloudFilesCDN.swift in Sources */,
+				7E2E59FF1C47E814006ABB98 /* CloudFiles.swift in Sources */,
+				7E2E59FD1C47E814006ABB98 /* CFContainer.swift in Sources */,
+				7E2E5A011C47E814006ABB98 /* CloudFilesPrivate.swift in Sources */,
+				7E2E5A001C47E814006ABB98 /* CloudFilesCDN.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
