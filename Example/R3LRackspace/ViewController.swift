@@ -22,6 +22,14 @@ class ViewController: UIViewController {
                 
                 if success {
                     
+                    cloud.getPublicURL("##containerName##", name: "eye.jpg") { urlObject in
+                        
+                        if let urlObject = urlObject {
+                            print("URL: \(urlObject)")
+                        }
+                        
+                    }
+                    
                 }
                 
             }

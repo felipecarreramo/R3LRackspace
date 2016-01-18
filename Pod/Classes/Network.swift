@@ -40,9 +40,12 @@ public class Network: NSObject {
     public func sendRequest(method: RSHTTPMethod, endpoint: String? = nil, params: [String: AnyObject]? = nil, headers: [String: String]? = nil, completion:(data: AnyObject?, response: NSHTTPURLResponse?, error: NSError?) -> ()) {
         
         var url: String?
+        var parameterEncoding: ParameterEncoding?
         if let endpoint = endpoint {
             url =  "\(endpoint)"
+            parameterEncoding = ParameterEncoding.URL
         }else if let baseURL =  baseURL {
+            parameterEncoding = ParameterEncoding.JSON
             url = "\(baseURL)"
         }
         
@@ -50,12 +53,12 @@ public class Network: NSObject {
             
             var allHeaders = [String: String]()
             
+            if let token = self.token {
+                allHeaders["X-Auth-Token"] = token
+            }
+            
             if let headers = headers {
-                
-                if let token = self.token {
-                    allHeaders["X-Auth-Token"] = token
-                }
-                
+
                 if self.debug {
                     
                     let jsonData: NSData?
@@ -91,8 +94,8 @@ public class Network: NSObject {
                 aMethod = Alamofire.Method.HEAD
             }
             
-            if let aMethod = aMethod {
-                Alamofire.request(aMethod, url, parameters: params, encoding: ParameterEncoding.JSON, headers: allHeaders)
+            if let aMethod = aMethod, let parameterEncoding = parameterEncoding{
+                Alamofire.request(aMethod, url, parameters: params, encoding: parameterEncoding, headers: allHeaders)
                     .responseJSON() { response in
                         
                         switch response.result {
