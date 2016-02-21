@@ -19,6 +19,7 @@ public class Network: NSObject {
     
     private var responseData = NSMutableData()
     private var completionUpload : ((success: Bool) -> ())?
+    private var currentRequest: Request?
     
     public enum RSHTTPMethod: String {
         case POST   = "POST"
@@ -37,7 +38,39 @@ public class Network: NSObject {
     }
     
     
-    public func sendRequest(method: RSHTTPMethod, endpoint: String? = nil, params: [String: AnyObject]? = nil, headers: [String: String]? = nil, completion:(data: AnyObject?, response: NSHTTPURLResponse?, error: NSError?) -> ()) {
+    public func responseJSONWithCompletionHandler(completionHandler: (data: AnyObject?, response: NSHTTPURLResponse?, error: NSError?) -> ()) {
+        
+        currentRequest?.responseJSON() { response in
+            
+            switch response.result {
+            case .Success(let data):
+                completionHandler(data: data, response: response.response, error: nil)
+            case .Failure(let error):
+                if self.debug {
+                    print("Error: \(error.localizedDescription)")
+                }
+                completionHandler(data: nil, response: nil, error: error)
+            }
+        }
+    }
+        
+    public func responseDataWithCompletionHandler(completionHandler: (data: AnyObject?, response: NSHTTPURLResponse?, error: NSError?) -> ()) {
+            
+        currentRequest?.responseData { response in
+                
+            switch response.result {
+            case .Success(let data):
+                completionHandler(data: data, response: response.response, error: nil)
+            case .Failure(let error):
+                if self.debug {
+                    print("Error: \(error.localizedDescription)")
+                }
+                completionHandler(data: nil, response: nil, error: error)
+            }
+        }
+    }
+            
+    public func sendRequest(method: RSHTTPMethod, endpoint: String? = nil, params: [String: AnyObject]? = nil, headers: [String: String]? = nil) -> Self {
         
         var url: String?
         var parameterEncoding: ParameterEncoding?
@@ -95,23 +128,16 @@ public class Network: NSObject {
             }
             
             if let aMethod = aMethod, let parameterEncoding = parameterEncoding{
-                Alamofire.request(aMethod, url, parameters: params, encoding: parameterEncoding, headers: allHeaders)
-                    .responseJSON() { response in
-                        
-                        switch response.result {
-                        case .Success(let data):
-                            print(data)
-                            completion(data: data, response: response.response, error: nil)
-                        case .Failure(let error):
-                            if self.debug {
-                                print("Error: \(error.localizedDescription)")
-                            }
-                            completion(data: nil, response: nil, error: error)
-                        }
-                }
+                
+                currentRequest = Alamofire.request(aMethod, url, parameters: params, encoding: parameterEncoding, headers: allHeaders)
+                
             }
         }
+        
+        return self
     }
+    
+    
     
     func uploadFile(data: NSData, url: NSURL, method: RSHTTPMethod, completion: (success: Bool)->()) {
         

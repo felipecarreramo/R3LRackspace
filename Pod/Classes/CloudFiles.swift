@@ -55,8 +55,8 @@ public class CloudFiles {
             let key = ["RAX-KSKEY:apiKeyCredentials": credentials]
             let auth = ["auth": key]
 
-            network.sendRequest(Network.RSHTTPMethod.POST, params: auth ) {
-                (data, response, error) in
+            network.sendRequest(Network.RSHTTPMethod.POST, params: auth )
+                .responseJSONWithCompletionHandler { (data, response, error) in
                 if let data = data as? [String: AnyObject] , let access = data["access"] as? [String: AnyObject] {
                     self.authenticated = true
                     
@@ -161,14 +161,13 @@ public class CloudFiles {
                     endpoint: "\(endpoint)/\(container)",
                     headers: [
                         "Accept": "application/json"
-                    ],
-                    completion: { (data, response, error) -> () in
+                    ]).responseJSONWithCompletionHandler({ (data, response, error) -> () in
                         guard let _ = error else {
                             print(response)
                             print(data)
                             return
                         }
-                })
+                    })
                 
             }
         }
@@ -195,15 +194,13 @@ public class CloudFiles {
                     endpoint: "\(endpoint)",
                     headers: [
                         "Accept": "application/json"
-                    ],
-                    completion: { (data, response, error) -> () in
+                    ]).responseJSONWithCompletionHandler({ (data, response, error) -> () in
                         guard let _ = error else {
                             print(response)
                             print(data)
                             return
                         }
-                })
-                
+                    })
             }
         }
         
@@ -231,8 +228,7 @@ public class CloudFiles {
                     endpoint: "\(endpoint)/\(container)",
                     headers: [
                         "X-CDN-Enabled": "True"
-                    ],
-                    completion: { (data, response, error) -> () in
+                    ]).responseJSONWithCompletionHandler({ (data, response, error) -> () in
                         print(NSString(data: data as! NSData, encoding: NSUTF8StringEncoding))
                         print(response)
                         guard let _ = error else {
@@ -269,8 +265,7 @@ public class CloudFiles {
                     endpoint: "\(endpoint)",
                     headers: [
                         "Accept": "application/json"
-                    ],
-                    completion: { (data, response, error) -> () in
+                    ]).responseJSONWithCompletionHandler( { (data, response, error) -> () in
                         guard let _ = error else {
                             print(response)
                             print(data)
@@ -299,10 +294,8 @@ public class CloudFiles {
         
         if let cdn: CloudFilesCDN = self.services?.first as? CloudFilesCDN, let endpoint = cdn.endpoint {
             self.network.sendRequest(Network.RSHTTPMethod.HEAD,
-                endpoint: "\(endpoint)/\(containerName)",
-                completion: { (data, response, error) -> () in
-                    
-                    
+                endpoint: "\(endpoint)/\(containerName)").responseDataWithCompletionHandler({ (data, response, error) -> () in
+
                     if let _ = error {
                         completionInfo(urlString: nil)
                     }else {
@@ -343,8 +336,7 @@ public class CloudFiles {
             
             if let cdn: CloudFilesPrivate = self.services?[1] as? CloudFilesPrivate, let endpoint = cdn.endpoint, let account = self.tenant["id"]{
                 self.network.sendRequest(Network.RSHTTPMethod.PUT,
-                    endpoint: "\(endpoint)/\(account)/\(name)",
-                    completion: { (data, response, error) -> () in
+                    endpoint: "\(endpoint)/\(account)/\(name)").responseJSONWithCompletionHandler({ (data, response, error) -> () in
                         guard let _ = error else {
                             print(response)
                             print(data)

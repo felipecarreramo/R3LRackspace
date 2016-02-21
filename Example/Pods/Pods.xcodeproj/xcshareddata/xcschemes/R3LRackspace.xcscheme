@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '7355F500DE0A8E229EF1BD2F'
+               BlueprintIdentifier = '6513CBEF3200CEF7C2E62E4E'
                BlueprintName = 'R3LRackspace'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'R3LRackspace.framework'>

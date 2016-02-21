@@ -1,5 +1,7 @@
 PODS:
-  - R3LRackspace (0.1.0)
+  - Alamofire (3.2.0)
+  - R3LRackspace (0.1.8):
+    - Alamofire
 
 DEPENDENCIES:
   - R3LRackspace (from `../`)
@@ -9,6 +11,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  R3LRackspace: 391fcd5abe50ac4a06fc39060e20bbe2d9fe003e
+  Alamofire: 4da478599fccddff361205c8929333d7fe18dceb
+  R3LRackspace: 30aad190ffd04b3dc73c4003e704f38f9c37a12a
 
 COCOAPODS: 0.39.0
