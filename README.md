@@ -20,9 +20,13 @@ it, simply add the following line to your Podfile:
 pod "R3LRackspace"
 ```
 
+## Dependencies
+
+Require Alamofire 3.1.5+
+
 ## Author
 
-Juan Felipe Carrera Moya, pipecamo@gmail.com
+Juan Felipe Carrera Moya, juan.carrera@rokk3rlabs.com
 
 ## License
 
